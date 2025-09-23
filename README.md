@@ -1,12 +1,14 @@
 # ECE2112 PA3
 
+<b> PANDAS <b>
 
-P1
+In this problem assignment, we were given a CSV file that contains a data frame of cars and their attributes. Our task was to narrow down the data frame to a specific condition needed.
+
+# PROBLEM 1
+
+First task was to load the said CSV file
 ``` python
-import pandas as pd #importing pandas into the Python code as pd
 cars = pd.read_csv('cars.xls') #reads the cars.xls file into the python code
-cars.head() #gets the first 5 rows of the entire data frame
-cars.tail() #gets the last 5 rows of the data frame
 ```
 
 P2
