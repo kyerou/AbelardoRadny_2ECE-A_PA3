@@ -21,12 +21,12 @@ cars.tail() #To get the last five rows of the dataframe
 
 # PROBLEM 2
 
-On Problem 2, we use the same CSV file to get cars that apply to the certain conditions 
+On Problem 2, we use the same CSV file to get cars that apply to certain conditions 
 
 The first task was to get the first 5 rows of the data frame with odd-numbered columns.
 ``` python
 odd = cars.iloc #using iloc, locates the index in the dataframe.
-iloc[:, ::2] #the setup for the brackets in iloc is [rows, column]. The : is meant for rang,e which is why I put it on the rows section, then on the second section, it's was used to skip the index by 2
+iloc[:, ::2] #the setup for the brackets in iloc is [rows, column]. The : is meant for range,which is why I put it on the rows section, then on the second section, it was used to skip the index by 2
 ```
 
 For the second task, it was asked to search for a certain row that has a specific Model. The model asked was the Mazda RX4.
@@ -49,5 +49,20 @@ All together:
 ``` python
 cars.loc[cars['Model']=='Camaro Z28', ['cyl']]
 ```
-cars.loc[[1,28,18],['Model','cyl','gear']] #searches for the cars by their index in the data frame and outputs their Model, cyl, and gear.
+
+For the last task, we had to print out the cylinder and the gear type of the 3 specific cars, that being the Mazda RX4 Wag, Ford Pantera L, and Honda Civic.
+
+To find the certain cars, I used 'loc' code to locate each car by their indexes/placements
+```python
+cars.loc[[1,28,18] #locates the Mazda, Ford, and Civic
+```
+
+the for the second part of the code is what is to be printed out when the code runs
+```python
+['Model','cyl','gear'] #outputs the Model, cyl, and gear
+```
+
+All together:
+```python
+cars.loc[[1,28,18],['Model', 'cyl', 'gear']] #searches for the cars by their index in the data frame and outputs their Model, cyl, and gear.
 ```
